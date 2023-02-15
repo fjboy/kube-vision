@@ -1,0 +1,9 @@
+<v-data-table dense :headers="namespaceView.table.headers" :items="namespaceView.table.items" item-key="name"
+  :items-per-page="namespaceView.table.itemsPerPage" :search="namespaceView.table.search"
+  show-select v-model="namespaceView.table.selected" show-expand single-expand>
+
+  <template v-slot:item.labels="{ item }">
+    <v-chip x-small label v-for="value, key in item.labels" class="mr-2">[[key]]=[[value]]</v-chip>
+  </template>
+
+</v-data-table>

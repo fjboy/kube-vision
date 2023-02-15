@@ -1,0 +1,16 @@
+<v-data-table dense :headers="podPage.table.headers" :items="podPage.table.items" item-key="name"
+  :items-per-page="podPage.table.itemsPerPage" :search="podPage.table.search"
+  show-select v-model="podPage.table.selected" show-expand single-expand>
+
+  <template v-slot:expanded-item="{ headers, item }">
+    <td></td><td></td>
+    <td :colspan="headers.length -1" >
+      <table>
+        <template v-for="extendItem in podPage.table.extendItems">
+          <tr><td><strong>[[extendItem.text ]]:</strong> </td><td>[[ item[extendItem.value] ]]</td></tr>
+        </template>
+      </table>
+    </td>
+  </template>
+
+</v-data-table>

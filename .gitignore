@@ -127,3 +127,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# vscode
+.vscode
+
+kubevision/static/cdn
+kubevision/static/cdn.zip
+kubevision/static/include
+
+etc/kubevision.db
+etc/kubevision.conf
+etc/hosts
+i18n/locale
+i18n/*.mo
+kubevision/locale
